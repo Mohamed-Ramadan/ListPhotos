@@ -23,7 +23,7 @@ final class DefaultPhotosRepositoryImplementer: PhotosRepository {
         // load photos from cache storage
         photosStorage.getResponse(for: requestDTO) { result in
             if case let .success(responseDTO?) = result {
-                cached(responseDTO.toDomain())
+                cached(responseDTO.toDomain(page: requestDTO.page))
             }
         }
         
@@ -32,7 +32,7 @@ final class DefaultPhotosRepositoryImplementer: PhotosRepository {
     }
     
     func savePhotos(limit: Int, page: Int, photosDTO: PhotosResponseDTO) {
-        let requestDTO = PhotosRequestDTO(page: page, limit: limit) 
+        let requestDTO = PhotosRequestDTO(page: page, limit: limit)
         photosStorage.save(responseDTO: photosDTO, for: requestDTO)
     }
 }

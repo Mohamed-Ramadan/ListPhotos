@@ -18,7 +18,7 @@ final class DefaultPhotosCoreDataStorage {
     // MARK: - Private
     private func fetchRequest(for requestDto: PhotosRequestDTO) -> NSFetchRequest<PhotosRequestEntity> {
         let request: NSFetchRequest = PhotosRequestEntity.fetchRequest()
-        request.predicate = NSPredicate(format: "%K = %@ AND %K = %d",
+        request.predicate = NSPredicate(format: "%K = %d AND %K = %d",
                                         #keyPath(PhotosRequestEntity.limit), requestDto.limit,
                                         #keyPath(PhotosRequestEntity.page), requestDto.page)
         return request
@@ -48,6 +48,7 @@ extension DefaultPhotosCoreDataStorage: PhotosResponseStorage {
 
                 completion(.success(requestEntity?.response?.toDTO()))
             } catch {
+                debugPrint(error.localizedDescription)
                 completion(.failure(CoreDataStorageError.readError(error)))
             }
         }

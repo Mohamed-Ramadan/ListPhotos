@@ -8,6 +8,7 @@
 import Foundation
 
 struct PhotosModel {
+    let page: Int
     let photos: [PhotoModel]
 }
 

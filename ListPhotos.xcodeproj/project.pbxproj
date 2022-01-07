@@ -29,6 +29,15 @@
 		FA4FAAA7278894B7004ABED2 /* PhotosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAAA6278894B7004ABED2 /* PhotosUseCase.swift */; };
 		FA4FAAAA2788954F004ABED2 /* PhotosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAAA92788954F004ABED2 /* PhotosRepository.swift */; };
 		FA4FAAAC27889EBE004ABED2 /* DefaultPhotosRepositoryImplementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAAAB27889EBE004ABED2 /* DefaultPhotosRepositoryImplementer.swift */; };
+		FA4FAAB52788A244004ABED2 /* PhotosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAAB32788A244004ABED2 /* PhotosListViewController.swift */; };
+		FA4FAAB62788A244004ABED2 /* PhotosListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4FAAB42788A244004ABED2 /* PhotosListViewController.xib */; };
+		FA4FAAB82788A2A4004ABED2 /* PhotosListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAAB72788A2A4004ABED2 /* PhotosListViewModel.swift */; };
+		FA4FAABA2788A4FB004ABED2 /* PhotoListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAAB92788A4FB004ABED2 /* PhotoListItemViewModel.swift */; };
+		FA4FAABC2788A88F004ABED2 /* ActivityIndicatorMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAABB2788A88F004ABED2 /* ActivityIndicatorMaker.swift */; };
+		FA4FAABE2788A8AA004ABED2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAABD2788A8AA004ABED2 /* UIViewController+Extension.swift */; };
+		FA4FAAC12788A934004ABED2 /* PhotoListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAABF2788A934004ABED2 /* PhotoListItemTableViewCell.swift */; };
+		FA4FAAC22788A934004ABED2 /* PhotoListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4FAAC02788A934004ABED2 /* PhotoListItemTableViewCell.xib */; };
+		FA4FAAC42788AAA6004ABED2 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAAC32788AAA6004ABED2 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +86,15 @@
 		FA4FAAA6278894B7004ABED2 /* PhotosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosUseCase.swift; sourceTree = "<group>"; };
 		FA4FAAA92788954F004ABED2 /* PhotosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRepository.swift; sourceTree = "<group>"; };
 		FA4FAAAB27889EBE004ABED2 /* DefaultPhotosRepositoryImplementer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPhotosRepositoryImplementer.swift; sourceTree = "<group>"; };
+		FA4FAAB32788A244004ABED2 /* PhotosListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListViewController.swift; sourceTree = "<group>"; };
+		FA4FAAB42788A244004ABED2 /* PhotosListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosListViewController.xib; sourceTree = "<group>"; };
+		FA4FAAB72788A2A4004ABED2 /* PhotosListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListViewModel.swift; sourceTree = "<group>"; };
+		FA4FAAB92788A4FB004ABED2 /* PhotoListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListItemViewModel.swift; sourceTree = "<group>"; };
+		FA4FAABB2788A88F004ABED2 /* ActivityIndicatorMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorMaker.swift; sourceTree = "<group>"; };
+		FA4FAABD2788A8AA004ABED2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		FA4FAABF2788A934004ABED2 /* PhotoListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListItemTableViewCell.swift; sourceTree = "<group>"; };
+		FA4FAAC02788A934004ABED2 /* PhotoListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoListItemTableViewCell.xib; sourceTree = "<group>"; };
+		FA4FAAC32788AAA6004ABED2 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +205,8 @@
 		FA4FAA832788862B004ABED2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FA4FAAAF2788A1ED004ABED2 /* Photos */,
+				FA4FAAAE2788A1DD004ABED2 /* Utils */,
 				FA4FAA51278884A3004ABED2 /* ViewController.swift */,
 				FA4FAA53278884A3004ABED2 /* Main.storyboard */,
 			);
@@ -298,6 +318,53 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		FA4FAAAE2788A1DD004ABED2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FA4FAABB2788A88F004ABED2 /* ActivityIndicatorMaker.swift */,
+				FA4FAABD2788A8AA004ABED2 /* UIViewController+Extension.swift */,
+				FA4FAAC32788AAA6004ABED2 /* UIImageView+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FA4FAAAF2788A1ED004ABED2 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				FA4FAAB02788A1F5004ABED2 /* List */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		FA4FAAB02788A1F5004ABED2 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				FA4FAAB22788A1FE004ABED2 /* ViewModel */,
+				FA4FAAB12788A1F8004ABED2 /* View */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		FA4FAAB12788A1F8004ABED2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA4FAAB32788A244004ABED2 /* PhotosListViewController.swift */,
+				FA4FAAB42788A244004ABED2 /* PhotosListViewController.xib */,
+				FA4FAABF2788A934004ABED2 /* PhotoListItemTableViewCell.swift */,
+				FA4FAAC02788A934004ABED2 /* PhotoListItemTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA4FAAB22788A1FE004ABED2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA4FAAB72788A2A4004ABED2 /* PhotosListViewModel.swift */,
+				FA4FAAB92788A4FB004ABED2 /* PhotoListItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -402,6 +469,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4FAA5D278884A5004ABED2 /* LaunchScreen.storyboard in Resources */,
+				FA4FAAB62788A244004ABED2 /* PhotosListViewController.xib in Resources */,
+				FA4FAAC22788A934004ABED2 /* PhotoListItemTableViewCell.xib in Resources */,
 				FA4FAA5A278884A5004ABED2 /* Assets.xcassets in Resources */,
 				FA4FAA55278884A3004ABED2 /* Main.storyboard in Resources */,
 			);
@@ -435,14 +504,21 @@
 				FA4FAA9D27888D0B004ABED2 /* PhotosResponseEntity+Mapping.swift in Sources */,
 				FA4FAA9A27888C5C004ABED2 /* ListPhotos.xcdatamodeld in Sources */,
 				FA4FAA8F27888734004ABED2 /* PhotosRequestDTO+Mapping.swift in Sources */,
+				FA4FAABC2788A88F004ABED2 /* ActivityIndicatorMaker.swift in Sources */,
 				FA4FAA9727888A1F004ABED2 /* PhotosResponseStorage.swift in Sources */,
+				FA4FAABA2788A4FB004ABED2 /* PhotoListItemViewModel.swift in Sources */,
+				FA4FAAB82788A2A4004ABED2 /* PhotosListViewModel.swift in Sources */,
 				FA4FAA9927888A75004ABED2 /* DefaultPhotosCoreDataStorage.swift in Sources */,
+				FA4FAABE2788A8AA004ABED2 /* UIViewController+Extension.swift in Sources */,
 				FA4FAAAC27889EBE004ABED2 /* DefaultPhotosRepositoryImplementer.swift in Sources */,
 				FA4FAA94278889DE004ABED2 /* CoreDataStorage.swift in Sources */,
 				FA4FAA52278884A3004ABED2 /* ViewController.swift in Sources */,
 				FA4FAA912788875A004ABED2 /* PhotosResponseDTO+Mapping.swift in Sources */,
+				FA4FAAB52788A244004ABED2 /* PhotosListViewController.swift in Sources */,
+				FA4FAAC42788AAA6004ABED2 /* UIImageView+Extension.swift in Sources */,
 				FA4FAA4E278884A3004ABED2 /* AppDelegate.swift in Sources */,
 				FA4FAA8D278886F7004ABED2 /* NetworkService.swift in Sources */,
+				FA4FAAC12788A934004ABED2 /* PhotoListItemTableViewCell.swift in Sources */,
 				FA4FAAAA2788954F004ABED2 /* PhotosRepository.swift in Sources */,
 				FA4FAA50278884A3004ABED2 /* SceneDelegate.swift in Sources */,
 			);
@@ -623,6 +699,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NHB6XUG436;
 				INFOPLIST_FILE = ListPhotos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -642,6 +719,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NHB6XUG436;
 				INFOPLIST_FILE = ListPhotos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

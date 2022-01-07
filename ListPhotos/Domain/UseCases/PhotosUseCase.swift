@@ -35,7 +35,7 @@ final class DefaultPhotosUseCase: PhotosUseCase {
                                                          photosDTO: model)
                     }
                     
-                    completion(.success(model.toDomain()))
+                    completion(.success(model.toDomain(page: requestValue.page)))
                     
                 case .failure(let error):
                     completion(.failure(error))
@@ -46,5 +46,5 @@ final class DefaultPhotosUseCase: PhotosUseCase {
 
 struct PhotosRequestValue {
     let page: Int
-    let limit: Int = 10
+    let limit: Int
 }
