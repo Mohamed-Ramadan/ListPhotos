@@ -24,6 +24,8 @@
 		FA4FAA9927888A75004ABED2 /* DefaultPhotosCoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAA9827888A75004ABED2 /* DefaultPhotosCoreDataStorage.swift */; };
 		FA4FAA9A27888C5C004ABED2 /* ListPhotos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAA56278884A3004ABED2 /* ListPhotos.xcdatamodeld */; };
 		FA4FAA9D27888D0B004ABED2 /* PhotosResponseEntity+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAA9C27888D0B004ABED2 /* PhotosResponseEntity+Mapping.swift */; };
+		FA4FAAA2278892EF004ABED2 /* PhotosQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAAA1278892EF004ABED2 /* PhotosQuery.swift */; };
+		FA4FAAA4278892FE004ABED2 /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAAA3278892FE004ABED2 /* PhotosModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		FA4FAA9627888A1F004ABED2 /* PhotosResponseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosResponseStorage.swift; sourceTree = "<group>"; };
 		FA4FAA9827888A75004ABED2 /* DefaultPhotosCoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPhotosCoreDataStorage.swift; sourceTree = "<group>"; };
 		FA4FAA9C27888D0B004ABED2 /* PhotosResponseEntity+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotosResponseEntity+Mapping.swift"; sourceTree = "<group>"; };
+		FA4FAAA1278892EF004ABED2 /* PhotosQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosQuery.swift; sourceTree = "<group>"; };
+		FA4FAAA3278892FE004ABED2 /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 		FA4FAA812788861C004ABED2 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FA4FAAA0278892D0004ABED2 /* Entity */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -165,8 +170,8 @@
 		FA4FAA8227888621004ABED2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				FA4FAA8427888653004ABED2 /* Local */,
-				FA4FAA8527888658004ABED2 /* Remote */,
+				FA4FAA9F278892A3004ABED2 /* Repository */,
+				FA4FAA9E27889299004ABED2 /* Source */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -241,6 +246,31 @@
 				FA4FAA9C27888D0B004ABED2 /* PhotosResponseEntity+Mapping.swift */,
 			);
 			path = EntityMapping;
+			sourceTree = "<group>";
+		};
+		FA4FAA9E27889299004ABED2 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FA4FAA8427888653004ABED2 /* Local */,
+				FA4FAA8527888658004ABED2 /* Remote */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		FA4FAA9F278892A3004ABED2 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		FA4FAAA0278892D0004ABED2 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FA4FAAA1278892EF004ABED2 /* PhotosQuery.swift */,
+				FA4FAAA3278892FE004ABED2 /* PhotosModel.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +403,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4FAAA4278892FE004ABED2 /* PhotosModel.swift in Sources */,
+				FA4FAAA2278892EF004ABED2 /* PhotosQuery.swift in Sources */,
 				FA4FAA8B278886B2004ABED2 /* Constants.swift in Sources */,
 				FA4FAA9D27888D0B004ABED2 /* PhotosResponseEntity+Mapping.swift in Sources */,
 				FA4FAA9A27888C5C004ABED2 /* ListPhotos.xcdatamodeld in Sources */,

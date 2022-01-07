@@ -23,9 +23,13 @@ struct PhotoDTO: Codable {
    
 //MARK: Mapping To Domain
 extension PhotosResponseDTO {
-
+    func toDomain() -> PhotosModel {
+        return .init(photos: self.map{ $0.toDomain()})
+    }
 }
 
 extension PhotoDTO {
-
+    func toDomain() -> PhotoModel {
+        return .init(id: id, author: author, url: url, downloadURL: downloadURL)
+    }
 }
