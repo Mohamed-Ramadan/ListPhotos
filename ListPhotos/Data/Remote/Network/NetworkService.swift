@@ -15,7 +15,7 @@ class URLSessionNetworkService: NetworkService {
      
     func getPhotos(request: PhotosRequestDTO, completion: @escaping (Result<PhotosResponseDTO, Error>) -> Void) {
         
-        let urlString = Constants.serverBaseURl + "page=\(request.page)&limit=\(request.limit)"
+        let urlString = Constants.serverBaseURl + "v2/list?page=\(request.page)&limit=\(request.limit)"
         guard let urlEncodedString = urlString.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: urlEncodedString) else {
             print("Wrong URL!: \(urlString)")
             return
