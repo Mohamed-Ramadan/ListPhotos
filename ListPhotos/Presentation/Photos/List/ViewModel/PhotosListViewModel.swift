@@ -50,7 +50,8 @@ class PhotosListViewModel: PhotosListViewModelInput {
     }
     
     //MARK:- Private
-    private func appendPage(_ page: PhotosModel) { 
+    private func appendPage(_ page: PhotosModel) {
+        loading = .none
         currentPage = page.page
         
         pages = pages
