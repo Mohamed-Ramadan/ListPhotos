@@ -88,8 +88,8 @@ class PhotosListViewModel: PhotosListViewModelInput {
         load(loading: .fullScreen)
     }
     
-    func getViewModel(for index: Int) -> PhotoListItemViewModel {
-        return PhotoListItemViewModel.init(photo: self.pages.photos[index])
+    func getViewModel(for indexPath: IndexPath) -> PhotoListItemViewModel {
+        return PhotoListItemViewModel.init(photo: self.pages.photosSections[indexPath.section][indexPath.row])
     }
 }
 
@@ -115,6 +115,14 @@ extension PhotosListViewModel {
 
 extension Array where Element == PhotosModel {
     var photos: [PhotoModel] { flatMap { $0.photos } }
+    var photosSections: [[PhotoModel]] {photos.chunked(into: 5)}
 }
 
 
+extension Array {
+    func chunked(into size: Int) -> [[Element]] {
+        return stride(from: 0, to: count, by: size).map {
+            Array(self[$0 ..< Swift.min($0 + size, count)])
+        }
+    }
+}

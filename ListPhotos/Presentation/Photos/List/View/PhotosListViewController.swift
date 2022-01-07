@@ -109,8 +109,12 @@ class PhotosListViewController: UIViewController {
 
 
 extension PhotosListViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.viewModel.pages.photosSections.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.pages.photos.count
+        return self.viewModel.pages.photosSections[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -119,7 +123,7 @@ extension PhotosListViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         cell.selectionStyle = .none
-        cell.configureCellWithPhoto(self.viewModel.getViewModel(for: indexPath.row))
+        cell.configureCellWithPhoto(self.viewModel.getViewModel(for: indexPath))
         return cell
     }
     
@@ -132,9 +136,32 @@ extension PhotosListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == self.viewModel.pages.photos.count-2 {
+        if indexPath.section == self.viewModel.pages.photosSections.count-1 {
             self.viewModel.didLoadNextPage()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .red
+        
+        let label = UILabel()
+        label.text = "Ad Placeholder"
+        label.textColor = .white
+        view.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if self.viewModel.pages.photosSections[section].count < 5 {
+            return 0
+        }
+        
+        return 100
     }
 }
 
