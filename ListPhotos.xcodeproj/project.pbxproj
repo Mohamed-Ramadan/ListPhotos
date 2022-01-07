@@ -26,6 +26,9 @@
 		FA4FAA9D27888D0B004ABED2 /* PhotosResponseEntity+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAA9C27888D0B004ABED2 /* PhotosResponseEntity+Mapping.swift */; };
 		FA4FAAA2278892EF004ABED2 /* PhotosQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAAA1278892EF004ABED2 /* PhotosQuery.swift */; };
 		FA4FAAA4278892FE004ABED2 /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAAA3278892FE004ABED2 /* PhotosModel.swift */; };
+		FA4FAAA7278894B7004ABED2 /* PhotosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAAA6278894B7004ABED2 /* PhotosUseCase.swift */; };
+		FA4FAAAA2788954F004ABED2 /* PhotosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAAA92788954F004ABED2 /* PhotosRepository.swift */; };
+		FA4FAAAC27889EBE004ABED2 /* DefaultPhotosRepositoryImplementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAAAB27889EBE004ABED2 /* DefaultPhotosRepositoryImplementer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		FA4FAA9C27888D0B004ABED2 /* PhotosResponseEntity+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotosResponseEntity+Mapping.swift"; sourceTree = "<group>"; };
 		FA4FAAA1278892EF004ABED2 /* PhotosQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosQuery.swift; sourceTree = "<group>"; };
 		FA4FAAA3278892FE004ABED2 /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
+		FA4FAAA6278894B7004ABED2 /* PhotosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosUseCase.swift; sourceTree = "<group>"; };
+		FA4FAAA92788954F004ABED2 /* PhotosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRepository.swift; sourceTree = "<group>"; };
+		FA4FAAAB27889EBE004ABED2 /* DefaultPhotosRepositoryImplementer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPhotosRepositoryImplementer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				FA4FAAA0278892D0004ABED2 /* Entity */,
+				FA4FAAA52788947B004ABED2 /* UseCases */,
+				FA4FAAA82788951B004ABED2 /* Repositories */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -260,6 +268,7 @@
 		FA4FAA9F278892A3004ABED2 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				FA4FAAAB27889EBE004ABED2 /* DefaultPhotosRepositoryImplementer.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -271,6 +280,22 @@
 				FA4FAAA3278892FE004ABED2 /* PhotosModel.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		FA4FAAA52788947B004ABED2 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				FA4FAAA6278894B7004ABED2 /* PhotosUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		FA4FAAA82788951B004ABED2 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				FA4FAAA92788954F004ABED2 /* PhotosRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4FAAA7278894B7004ABED2 /* PhotosUseCase.swift in Sources */,
 				FA4FAAA4278892FE004ABED2 /* PhotosModel.swift in Sources */,
 				FA4FAAA2278892EF004ABED2 /* PhotosQuery.swift in Sources */,
 				FA4FAA8B278886B2004ABED2 /* Constants.swift in Sources */,
@@ -411,11 +437,13 @@
 				FA4FAA8F27888734004ABED2 /* PhotosRequestDTO+Mapping.swift in Sources */,
 				FA4FAA9727888A1F004ABED2 /* PhotosResponseStorage.swift in Sources */,
 				FA4FAA9927888A75004ABED2 /* DefaultPhotosCoreDataStorage.swift in Sources */,
+				FA4FAAAC27889EBE004ABED2 /* DefaultPhotosRepositoryImplementer.swift in Sources */,
 				FA4FAA94278889DE004ABED2 /* CoreDataStorage.swift in Sources */,
 				FA4FAA52278884A3004ABED2 /* ViewController.swift in Sources */,
 				FA4FAA912788875A004ABED2 /* PhotosResponseDTO+Mapping.swift in Sources */,
 				FA4FAA4E278884A3004ABED2 /* AppDelegate.swift in Sources */,
 				FA4FAA8D278886F7004ABED2 /* NetworkService.swift in Sources */,
+				FA4FAAAA2788954F004ABED2 /* PhotosRepository.swift in Sources */,
 				FA4FAA50278884A3004ABED2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
