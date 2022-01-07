@@ -32,8 +32,7 @@ class PhotosListViewModel: PhotosListViewModelInput {
     private(set) var totalPhotos = 1
     private(set) var pageSize = 10
     private(set) var currentPage = 0
-    var hasMorePages: Bool { (currentPage * pageSize) < totalPhotos }
-    var nextPage: Int { hasMorePages ? currentPage + 1 : currentPage }
+    var nextPage: Int { currentPage + 1 }
      
     private(set) var loading: PhotosListViewModelLoading = .none {
         didSet {
@@ -103,8 +102,7 @@ extension PhotosListViewModel {
     }
     
     func didLoadNextPage() {
-        guard hasMorePages, self.loading == .none else {
-            self.loading = .none
+        guard self.loading == .none else {
             return
         }
         
