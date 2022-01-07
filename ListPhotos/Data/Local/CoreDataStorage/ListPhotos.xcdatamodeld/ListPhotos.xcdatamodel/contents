@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="PhotoResponseEntity" representedClassName="PhotoResponseEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="downloadUrl" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="photos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotosResponseEntity" inverseName="photos" inverseEntity="PhotosResponseEntity"/>
+    </entity>
+    <entity name="PhotosRequestEntity" representedClassName="PhotosRequestEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="limit" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="page" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="response" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotosResponseEntity" inverseName="request" inverseEntity="PhotosResponseEntity"/>
+    </entity>
+    <entity name="PhotosResponseEntity" representedClassName="PhotosResponseEntity" syncable="YES" codeGenerationType="class">
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhotoResponseEntity" inverseName="photos" inverseEntity="PhotoResponseEntity"/>
+        <relationship name="request" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotosRequestEntity" inverseName="response" inverseEntity="PhotosRequestEntity"/>
+    </entity>
+    <elements>
+        <element name="PhotosRequestEntity" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="PhotosResponseEntity" positionX="193.9540405273438" positionY="96.004638671875" width="128" height="73"/>
+        <element name="PhotoResponseEntity" positionX="-27.02685546875" positionY="150.267333984375" width="128" height="118"/>
+    </elements>
+</model>

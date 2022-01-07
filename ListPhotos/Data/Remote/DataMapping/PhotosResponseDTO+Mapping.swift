@@ -12,12 +12,11 @@ typealias PhotosResponseDTO = [PhotoDTO]
 
 // MARK: - PhotoDTO
 struct PhotoDTO: Codable {
-    let id, author: String
-    let width, height: Int
+    let id, author: String 
     let url, downloadURL: String
 
     enum CodingKeys: String, CodingKey {
-        case id, author, width, height, url
+        case id, author, url
         case downloadURL = "download_url"
     }
 }
