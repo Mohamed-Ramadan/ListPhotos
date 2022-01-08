@@ -74,7 +74,7 @@ extension UIImageView {
     }
     
     func addSpinner() {
-        let spinner = UIActivityIndicatorView(style: .gray)
+        let spinner = UIActivityIndicatorView(style: .medium)
         addSubview(spinner)
         
         spinner.translatesAutoresizingMaskIntoConstraints = false
