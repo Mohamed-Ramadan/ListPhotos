@@ -8,6 +8,7 @@
 import Foundation
  
 struct PhotoListItemViewModel: Equatable {
+    var id: String = ""
     var authorName: String = ""
     var downloadUrl: String = ""
 }
@@ -16,5 +17,6 @@ extension PhotoListItemViewModel {
     init(photo: PhotoModel) {
         self.authorName = photo.author
         self.downloadUrl = photo.downloadURL
+        self.id = photo.id
     }
 }

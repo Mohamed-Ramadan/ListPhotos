@@ -39,8 +39,11 @@ class PhotoListItemTableViewCell: UITableViewCell {
     func configureCellWithPhoto(_ photoViewModel: PhotoListItemViewModel) {
         authorNameLabel.text = photoViewModel.authorName
         
-        if let url = URL(string: photoViewModel.downloadUrl) {
-            photoImageView.loadImage(from: url)
+        let urlString = "https://picsum.photos/id/\(photoViewModel.id)/460/426"
+        print(urlString)
+        
+        if let url = URL(string: urlString) {
+            photoImageView.loadImage(from: url, identifier: photoViewModel.id)
         } 
     }
 }

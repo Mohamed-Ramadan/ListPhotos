@@ -25,16 +25,23 @@ extension UIImageView {
         }
     }
     
-    func loadImage(from url: URL, backgroundImage: UIImage? = UIImage(named: "book-placeholder")) {
+    func loadImage(from url: URL, backgroundImage: UIImage? = nil, identifier: String? = nil) {
         image = backgroundImage
         
         addSpinner()
         
+        var imageFileName = ""
+        if let identifier = identifier {
+            imageFileName = identifier
+        } else {
+            imageFileName = url.pathComponents.dropFirst().joined()
+        }
+         
         if let task = task {
             task.cancel()
         }
     
-        if let imageFromCache = self.loadImageFromDocumentDirectory(fileName: url.lastPathComponent) {
+        if let imageFromCache = self.loadImageFromDocumentDirectory(fileName: imageFileName) {
             self.image = imageFromCache
             self.removeSpinner()
             return
@@ -50,7 +57,7 @@ extension UIImageView {
                 return
             }
             
-            if self.saveImageInDocumentDirectory(image: newImage, fileName: url.lastPathComponent) != nil {
+            if self.saveImageInDocumentDirectory(image: newImage, fileName: imageFileName) != nil {
                 //print("Image saved successfully to url: \(url.absoluteString)")
             }
             
