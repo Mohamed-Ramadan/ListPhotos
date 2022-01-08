@@ -132,7 +132,11 @@ extension PhotosListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
- 
+        let selectedPhoto = self.viewModel.didSelectItem(at: indexPath)
+        
+        let photoPreviewViewController = PhotoPreviewViewController(nibName: "PhotoPreviewViewController", bundle: nil)
+        photoPreviewViewController.imageUrlString = selectedPhoto.downloadURL
+        self.present(photoPreviewViewController, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

@@ -16,7 +16,7 @@ enum PhotosListViewModelLoading {
 protocol PhotosListViewModelInput {
     func viewDidLoad()
     func didLoadNextPage()
-    func didSelectItem(at index: Int) -> PhotoModel
+    func didSelectItem(at indexPath: IndexPath) -> PhotoModel
 }
 
 
@@ -98,8 +98,8 @@ class PhotosListViewModel: PhotosListViewModelInput {
 extension PhotosListViewModel {
     func viewDidLoad() {}
      
-    func didSelectItem(at index: Int) -> PhotoModel {
-        return pages.photos[index]
+    func didSelectItem(at indexPath: IndexPath) -> PhotoModel {
+        return pages.photosSections[indexPath.section][indexPath.row]
     }
     
     func didLoadNextPage() {

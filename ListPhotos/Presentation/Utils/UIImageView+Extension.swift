@@ -8,7 +8,7 @@
 import UIKit
 import ObjectiveC
   
-extension UIImageView {
+@objc extension UIImageView {
     
     private struct AssociatedKey {
         static var task = "task"
