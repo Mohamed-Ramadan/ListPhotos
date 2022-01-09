@@ -23,6 +23,6 @@
 - Swift + Objective C
 
 ## How to run this project:
-1- clone the repository
-2- go to project directory
-3- open .xcodeproj file using XCode 
+ * 1- clone the repository
+ * 2- go to project directory
+ * 3- open .xcodeproj file using XCode 
