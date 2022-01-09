@@ -10,8 +10,13 @@ import XCTest
 
 class PhotosUseCaseTests: XCTestCase {
 
+    var photosUSeCase: PhotosUseCase!
+    var repository: PhotosRepository!
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        repository = DefaultPhotosRepositoryImplementer()
+        photosUSeCase = DefaultPhotosUseCase(photosRepository: repository)
     }
 
     override func tearDownWithError() throws {
@@ -28,6 +33,36 @@ class PhotosUseCaseTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func test_fetchPhotosOfPageOne() {
+        // arrange
+        let photoRequestValue = PhotosRequestValue(page: 1, limit: 10)
+        
+        // Act
+        photosUSeCase.fetchPhotos(requestValue: photoRequestValue) { cachedPhotos in
+            
+            // Assert
+            XCTAssertNotNil(cachedPhotos, "Cached photos is Nil")
+            XCTAssertLessThanOrEqual(cachedPhotos.photos.count, photoRequestValue.limit)
+            XCTAssertEqual(cachedPhotos.page, photoRequestValue.page)
+            
+        } completion: { result in
+            switch result {
+                case .success(let photos):
+                    
+                    // Assert
+                    XCTAssertNotNil(photos, "Photos is Nil")
+                    XCTAssertLessThanOrEqual(photos.photos.count, photoRequestValue.limit)
+                    XCTAssertEqual(photos.page, photoRequestValue.page)
+                    break
+                case .failure(let error):
+                    // Assert
+                    XCTAssertNotNil(error, "Error is Nil")
+                    break
+            }
+        }
+
     }
 
 }
