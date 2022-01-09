@@ -40,6 +40,8 @@
 		FA4FAAC42788AAA6004ABED2 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAAC32788AAA6004ABED2 /* UIImageView+Extension.swift */; };
 		FA4FAACA278A2359004ABED2 /* PhotoPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4FAAC8278A2359004ABED2 /* PhotoPreviewViewController.m */; };
 		FA4FAACB278A2359004ABED2 /* PhotoPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4FAAC9278A2359004ABED2 /* PhotoPreviewViewController.xib */; };
+		FAF0B869278B5BD30046A142 /* PhotosUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF0B868278B5BD30046A142 /* PhotosUseCaseTests.swift */; };
+		FAF0B86B278B5D550046A142 /* PhotoListItemViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF0B86A278B5D550046A142 /* PhotoListItemViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		FA4FAAC7278A2359004ABED2 /* PhotoPreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoPreviewViewController.h; sourceTree = "<group>"; };
 		FA4FAAC8278A2359004ABED2 /* PhotoPreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoPreviewViewController.m; sourceTree = "<group>"; };
 		FA4FAAC9278A2359004ABED2 /* PhotoPreviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoPreviewViewController.xib; sourceTree = "<group>"; };
+		FAF0B868278B5BD30046A142 /* PhotosUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosUseCaseTests.swift; sourceTree = "<group>"; };
+		FAF0B86A278B5D550046A142 /* PhotoListItemViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListItemViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,8 @@
 			children = (
 				FA4FAA67278884A5004ABED2 /* ListPhotosTests.swift */,
 				FA4FAA69278884A5004ABED2 /* Info.plist */,
+				FAF0B868278B5BD30046A142 /* PhotosUseCaseTests.swift */,
+				FAF0B86A278B5D550046A142 /* PhotoListItemViewModelTests.swift */,
 			);
 			path = ListPhotosTests;
 			sourceTree = "<group>";
@@ -549,6 +555,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF0B86B278B5D550046A142 /* PhotoListItemViewModelTests.swift in Sources */,
+				FAF0B869278B5BD30046A142 /* PhotosUseCaseTests.swift in Sources */,
 				FA4FAA68278884A5004ABED2 /* ListPhotosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

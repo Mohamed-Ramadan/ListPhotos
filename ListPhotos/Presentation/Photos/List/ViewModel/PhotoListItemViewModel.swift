@@ -7,7 +7,7 @@
 
 import Foundation
  
-struct PhotoListItemViewModel: Equatable {
+struct PhotoListItemViewModel {
     var id: String = ""
     var authorName: String = ""
     var downloadUrl: String = ""
