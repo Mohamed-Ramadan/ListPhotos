@@ -17,10 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+     
+    _scrollView.delegate = self;
+    
+    // For supporting zoom,
+    _scrollView.minimumZoomScale = 1.0;
+    _scrollView.maximumZoomScale = 3.0;
+    
     if (self.imageUrlString != nil) {
         NSURL *url = [NSURL URLWithString:self.imageUrlString];
         [_photoImageView loadImageFrom:url backgroundImage:nil identifier:nil];
     }
+}
+
+- (UIView*)viewForZoomingInScrollView:(UIScrollView *)aScrollView {
+    return _photoImageView;
 }
 
 /*

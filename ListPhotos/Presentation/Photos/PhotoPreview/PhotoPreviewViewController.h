@@ -9,8 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PhotoPreviewViewController : UIViewController
+@interface PhotoPreviewViewController : UIViewController <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property NSString *imageUrlString;
 @end
 
